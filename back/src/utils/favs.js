@@ -1,3 +1,3 @@
 var favs = []
 
-module.exports = favs
+module.exports = {favs}

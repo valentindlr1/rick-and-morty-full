@@ -1,4 +1,4 @@
-var favs = require("../utils/favs")
+var {favs} = require("../utils/favs")
 
 const getFavs = (req, res)=>{
     res.json(favs)

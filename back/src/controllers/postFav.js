@@ -1,4 +1,4 @@
-var favs = require("../utils/favs")
+var {favs} = require("../utils/favs")
 
 const postFav = (req, res)=>{
     console.log(req.body)
