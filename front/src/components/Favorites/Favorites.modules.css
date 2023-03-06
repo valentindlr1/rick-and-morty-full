@@ -1,0 +1,29 @@
+.favorites{
+    display: flex;
+justify-content: center;
+flex-wrap: wrap;
+max-width: 100%;
+
+}
+hr{
+    width: 98%;
+}
+
+.select{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+
+    color: white;
+    background: rgba(0, 0, 0, 0.2);
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: large;
+    font-family: cursive;
+}
+.select:hover{
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px white;
+}

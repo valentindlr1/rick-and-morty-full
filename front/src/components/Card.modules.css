@@ -1,0 +1,32 @@
+.favBut{
+    cursor: pointer;
+position: relative;
+border: 1px solid white;
+border-radius: 100%;
+margin: 10px;
+background: rgba(251, 129, 196, 0.5);
+font-size: 18px;
+}
+.favBut:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+/*
+
+const favButton = style.button`
+cursor: pointer;
+position: relative;
+
+border-radius: 5px;
+margin: 10px;
+background: rgba(251, 156, 221, 0.5);
+font-size: 18px;
+color: #4D0135;
+font-weight: bold;
+&:hover {
+   background-color: red;
+}
+`;
+
+
+*/

@@ -1,0 +1,76 @@
+.labels{
+    color: white;
+    font-family: cursive;
+    font-size: large;
+    text-shadow: 0 0 20px;
+}
+.warning{
+    border: 2px solid red;
+    border-radius: 15px;
+    height: 25px;
+    font-size: large;
+}
+.danger{
+    color: red;
+    display:flex;
+    justify-content: right;
+}
+.text{
+    border-radius: 15px;
+    height: 25px;
+    font-size: large;
+}
+.form{
+    /* display: flex; */
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid white;
+    position:absolute;
+    padding: 50px;
+    padding-top: 30px;
+    justify-self: center;
+    top: 20%;
+    left: 39%;
+    border-radius: 15px;
+    box-shadow: 0 0 40px #FFFFFF;
+    width: 350px;
+    /* height: 350px; */
+    
+}
+@media (max-width: 600px){
+    .form{
+        /* display: flex; */
+        background: rgba(0, 0, 0, 0.6);
+        border: 2px solid white;
+        position:absolute;
+        padding: 50px;
+        padding-top: 30px;
+        justify-self: center;
+        top: 20%;
+        left: 10%;
+        border-radius: 15px;
+        box-shadow: 0 0 40px #FFFFFF;
+        width: 55%;
+        /* height: 350px; */
+        
+    }
+}
+.h2{
+    color: white;
+    font-family: cursive;
+    text-shadow: 0 0 20px;
+}
+.sub{
+    font-family: cursive;
+    border-radius: 5px;
+margin: 10px;
+background: rgba(255, 255, 255, 0.7);
+font-size: 18px;
+color: black;
+font-weight: bold;
+cursor: pointer;
+}
+.sub:hover {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 15px #FFFFFF;
+   
+ }
