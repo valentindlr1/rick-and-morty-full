@@ -1,4 +1,5 @@
 var {favs} = require("../utils/favs")
+// var {favs} = require("./deleteFav")
 
 const postFav = (req, res)=>{
     console.log(req.body)

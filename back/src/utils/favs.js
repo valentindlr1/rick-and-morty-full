@@ -1,3 +1,3 @@
-var favs = []
+let favs = []
 
 module.exports = {favs}
