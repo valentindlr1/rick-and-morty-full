@@ -23,23 +23,15 @@ const rootReducer = (state = initialState, action) => {
                 myFavorites: action.payload
             }
         case FILTER:
-            if(action.payload === "Select" && !filtrado2) return {...state, allCharacters: [...state.myFavorites]}
-            if(action.payload === "Select" && filtrado2) return {...state}
+            if(action.payload === "Select") return {...state, allCharacters: [...state.myFavorites]}
 
-            filtrado=true
-            if(filtrado2){
-                let arrFilter = [...state.allCharacters].filter(char => char.gender === action.payload)
-                return{
-                    ...state,
-                    allCharacters: arrFilter
-                }
-            } else {
+            
                 let arrFilter = [...state.myFavorites].filter(char => char.gender === action.payload)
             return{
                 ...state,
                 allCharacters: arrFilter
             }
-            }
+            
             
         case ORDER:
             if(action.payload === "Select" && !filtrado) return {...state, allCharacters: [...state.myFavorites]}

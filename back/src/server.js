@@ -3,6 +3,7 @@ const express = require("express")
 const router = require("./routes/index")
 const cors = require("cors")
 const morgan = require("morgan")
+const { sequelize } = require("./DB_connection")
 // var data = require("./utils/data")
 // var fs = require("fs")
 
@@ -15,7 +16,12 @@ server.use("/", router)
 
 
 
-server.listen(PORT, ()=>{console.log('Server raised in port ' + PORT);})
+server.listen(PORT, ()=>{
+    
+        sequelize.sync({ force: true })
+        console.log('Server raised in port ' + PORT + ' and DB sync');
+     
+})
 
 // function cb(req, res){
 //     console.log(`Server raised in port ${PORT}`);
