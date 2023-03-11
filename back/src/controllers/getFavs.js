@@ -1,8 +1,11 @@
-var {favs} = require("../utils/favs")
-// var {favs} = require("./deleteFav")
+// var {favs} = require("../utils/favs")
+const { Favorite } = require('../DB_connection');
 
-const getFavs = (req, res)=>{
-    res.json(favs)
+
+const getFavs = async (req, res)=>{
+    const info = await Favorite.findAll()
+    console.log(info)
+    res.json(info)
 }
 
 module.exports = getFavs

@@ -1,11 +1,18 @@
-var {favs} = require("../utils/favs")
-// var {favs} = require("./deleteFav")
+// var {favs} = require("../utils/favs")
+const {Favorite} = require("../DB_connection")
 
-const postFav = (req, res)=>{
-    console.log(req.body)
-    const character = req.body;
-    favs.push(character)
-    res.json(favs)
+const postFav = async (req, res)=>{
+      
+    try {
+        const character = req.body;
+        console.log(character)
+    await Favorite.create(character)
+   
+    return res.json(character)
+    } catch (error) {
+        return res.status(400).json(error)
+    }
+    
 }
 
 module.exports = postFav

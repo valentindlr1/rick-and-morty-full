@@ -32,21 +32,27 @@ function login(userData){
 }
 
   function onSearch(text){
-    let repe = false;
-    characters.characters.forEach(element => {
-      if (element.id.toString() === text) repe = true;
-    });
-    if(!repe){
-      fetch(`http://localhost:3001/onsearch/${text}`)
-      .then((response) => response.json())
-      .then(res =>res.data)
-      .then((data) => {
-        navigate("/home");
-         if (data.name) {
-            setCharacters({characters: [...characters.characters, data]})
-         } else {
-            window.alert('No hay personajes con ese ID');
-         }})} else return window.alert("Ya agregaste este personaje");
+        
+      try {
+        let repe = false;
+        characters.characters.forEach(element => {
+        if (element.id === Number(text)) repe = true;
+        });
+        if(Number(text) < 1 || Number(text) > 826) throw new Error('No hay personajes con ese ID')
+        if(!repe){
+          fetch(`http://localhost:3001/onsearch/${text}`)
+          .then((response) => response.json())
+          .then(res =>res.data)
+          .then((data) => {
+          navigate("/home");
+       
+          setCharacters({characters: [...characters.characters, data]})
+
+          })} else return window.alert("Ya agregaste este personaje");
+
+      } catch (error) {
+        window.alert(error.message);
+      }      
     } 
     
  

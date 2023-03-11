@@ -15,12 +15,12 @@ const rootReducer = (state = initialState, action) => {
         case ADD_FAVORITE:
             return{
                 ...state,
-                myFavorites: action.payload
+                myFavorites: [...state.myFavorites , action.payload]
             }
         case DEL_FAVORITE:
             return{
                 ...state,
-                myFavorites: action.payload
+                myFavorites: [...state.myFavorites].filter(fav => fav.id !== Number(action.payload))
             }
         case FILTER:
             if(action.payload === "Select") return {...state, allCharacters: [...state.myFavorites]}
